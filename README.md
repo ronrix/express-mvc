@@ -148,6 +148,14 @@ class HomeModel extends Connection {
 	// use it on any model methods like this
 	this.FormValidation.is_email_valid(fields);
 ```
+## File naming convention
+| folder	  | filename			  |
+| :---------: | :-------------------: |
+| controllers | example.controller.js |
+| views	 	  | example.view.js 	  |
+| models 	  | example.model.js 	  |
+| connection  | example.connection.js |
+| routes 	  | example.router.js     |
 
 ## REDIS
 	- the redis client is set to the request controller middleware 

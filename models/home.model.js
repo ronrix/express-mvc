@@ -4,7 +4,7 @@
 	OWNER: ronrix
 */ 
 
-const Connection = require("../connection/Connection");
+const Connection = require("../connection/mysql.connection");
 const FormValidation = require("../modules/validation/Validation");
 
 class HomeModel extends Connection {

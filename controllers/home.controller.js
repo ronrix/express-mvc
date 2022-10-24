@@ -5,7 +5,7 @@
 		use arrow function (recommended) to enable profiler properly
 	OWNER: ronrix
 */ 
-const HomeModel = require("../models/HomeModel");
+const HomeModel = require("../models/home.model");
 
 class HomeController {
 

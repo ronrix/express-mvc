@@ -9,9 +9,9 @@
 </head>
 <body>
 	<div class="container">
-		<% for(const user of data) {%>
-			<h2><%= user.first_name %></h2>
-			<p><%= user.email %></p>
+		<% if(data) {%>
+			<h2><%= data.first_name %></h2>
+			<p><%= data.email %></p>
 		<% } %>	
 		<h1>This is profile page</h1>
 		<%- include("../modules/profiler/profiler.ejs") %>

@@ -148,3 +148,13 @@ class HomeModel extends Connection {
 	// use it on any model methods like this
 	this.FormValidation.is_email_valid(fields);
 ```
+
+## REDIS
+	- the redis client is set to the request controller middleware 
+	- you can access redis client to get the data stored by using inside the controller method
+``` 
+	req.redis.get("sess:"+req.session.id, (err, data) => {
+		const parsed_object = JSON.parse(data); // parsing the data variable to become object
+		data = parsed_object.key;
+	});
+```

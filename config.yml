@@ -1,0 +1,10 @@
+---
+db_config_postgres: {
+	host: localhost,
+	user: ronrix,
+	password: root,
+	database: users,
+	port: 5432,
+}
+
+PORT: 8000

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registration</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+	<% if(data && data.status >= 400) { %>
+		<div class="error"><%= data.msg %></div>
+	<% } else if(data &&  data.status == 200) {%>
+		<div class="success"><%= msg.msg %></div>
+	<% } %>
+		
+		<form action="/login" method="POST">
+			<p>Login</p>
+			<label>
+				Email Address: 
+				<input type="email" name="email">
+			</label>
+			<label>
+				Password: 
+				<input type="password" name="password">
+			</label>
+			<input type="submit" value="Login" id="btn">
+		</form>
+		
+		<form action="/register" method="POST">
+			<p>Register</p>
+			<label>
+				First Name: 
+				<input type="text" name="fname">
+			</label>
+			<label>
+				Last Name: 
+				<input type="text" name="lname">
+			</label>
+			<label>
+				Email Address: 
+				<input type="email" name="email">
+			</label>
+			<label>
+				Password: 
+				<input type="password" name="password">
+			</label>			
+			<label>
+				Confirm Password: 
+				<input type="password" name="confirm_password">
+			</label>
+			<input type="submit" value="Register" id="btn">
+		</form>
+		<%- include("../modules/profiler/profiler.ejs") %>
+	</div>
+</body>
+</html>

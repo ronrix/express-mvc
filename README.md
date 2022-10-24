@@ -150,6 +150,8 @@ You can use it on your models.
 ```
 
 ## File naming convention
+| folder	  | filename			  |
+| :---------: | :-------------------: |
 | controllers | example.controller.js |
 | views	 	  | example.view.js 	  |
 | models 	  | example.model.js 	  |

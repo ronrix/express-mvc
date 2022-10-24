@@ -4,9 +4,9 @@ class SurveyController {
 	survey = (req, res) => {
 		req.enable_profiler(this, req, true);
 
-		res.view("../views/survey");
+		res.view("../views/survey.view.ejs");
 		
-		// res.render("../views/survey");
+		// res.render("../views/survey.view.ejs");
 	}
 
 	result = (req, res) => {
@@ -16,9 +16,9 @@ class SurveyController {
 		if(survey) {
 
 			// access the keys using data ex(data.something)
-			res.view("../views/result", survey);
+			res.view("../views/result.view.ejs", survey);
 			
-			// res.render("../views/result", {data})
+			// res.render("../views/result.view.ejs", {data})
 			return;
 		}
 		res.redirect("/survey");

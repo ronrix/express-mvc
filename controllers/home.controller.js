@@ -5,7 +5,7 @@
 		use arrow function (recommended) to enable profiler properly
 	OWNER: ronrix
 */ 
-const HomeModel = require("../models/HomeModel");
+const HomeModel = require("../models/home.model");
 
 class HomeController {
 
@@ -20,9 +20,9 @@ class HomeController {
 
 		// use res.view instead of render to use profiler
 		req.enable_profiler(this, req, true);
-		res.view("../views/index", msg);
+		res.view("../views/index.view.ejs", msg);
 
-		// res.render("../views/index", {msg});
+		// res.render("../views/index.view.ejs", {msg});
 	}
 
 	profile = (req, res) => {
@@ -31,7 +31,7 @@ class HomeController {
 
 		if(data) {	
 			// use res.view instead of render to use profiler
-			res.view("../views/profile", data);
+			res.view("../views/profile.view.ejs", data);
 			return;
 		}
 		res.redirect("/");

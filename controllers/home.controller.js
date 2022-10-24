@@ -31,7 +31,7 @@ class HomeController {
 			const data = parsed_object.data;
 			// if no data, redirect to homepage
 			if(!data) {
-				res.view("../views/index", msg);
+				res.view("../views/index.view.ejs", msg);
 				return;
 			}
 			// use res.view instead of render to use profiler
@@ -56,7 +56,7 @@ class HomeController {
 				return;
 			}
 			// use res.view instead of render to use profiler
-			res.view("../views/profile", data);
+			res.view("../views/profile.view.ejs", data);
 		});
 	}
 

@@ -2,7 +2,7 @@ const express = require("express")
 const router = express.Router();
 
 // controllers
-const SurveyController = require("../controllers/SurveyController.js");
+const SurveyController = require("../controllers/survey.controller.js");
 
 router.get("/survey", SurveyController.survey);
 router.get("/result", SurveyController.result);
